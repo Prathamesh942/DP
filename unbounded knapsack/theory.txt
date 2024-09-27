@@ -1,0 +1,16 @@
+Unbounded knapsack -> you can select multiple instances of same item
+
+same as 0-1 knapsack but just a slight change in recurrence relation
+
+j represent capacity
+i  represent selecting from i items
+
+BASE CASE
+dp[i][0] = 0;
+dp[0][j] = 0;
+
+withselect = 0; 
+withoutselect = dp[i-1][j];
+if(wt[i-1] <= j) withselect = dp[i][j-wt[i-1]] + val[i-1]
+
+dp[i][j] = max(withselect, withoutselect);
