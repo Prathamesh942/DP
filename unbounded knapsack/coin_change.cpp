@@ -1,3 +1,5 @@
+// Given an integer array coins[ ] of size N representing different denominations of currency and an integer sum, find the number of ways you can make sum by using different combinations from coins[ ].  
+
 long long int count(int coins[], int N, int sum) {
     vector<vector<long long int>> dp(N+1, vector<long long int>(sum+1,0));
     for(int i=0; i<=N; i++) dp[i][0]=1;
