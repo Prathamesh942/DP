@@ -17,3 +17,4 @@ int fun(int arr[], int left, int right){
         dp.resize(N, vector<int> (N, -1));
         return fun(arr,0,N-1);
     }
+}
