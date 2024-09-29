@@ -18,7 +18,7 @@ int matrixMultiplication(int N, int arr[]){
                 //dp[l][r] = min(dp[l][r], arr[l]*arr[r]*arr[k] + dp[l][k] + dp[k][r])
     
     for(int l=N-1; l>=0; l--){
-        for(int r=min(l+2,N-1); r<N; r++){
+        for(int r=l+2; r<N; r++){
             for(int k=l+1; k<r; k++){
                 dp[l][r]=min(dp[l][r], (dp[l][k]+dp[k][r]+arr[l]*arr[r]*arr[k]));
             }
